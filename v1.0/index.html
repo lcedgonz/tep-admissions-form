@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/de4becf666.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+    </style>
+    <title>Solicitud de Admisión - Carreras Técnico Superior</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-top">
+            <a id="portal-pucmm" href="https://www.pucmm.edu.do/">
+                <img src="images/arrow-icon.png" alt="left-arrow" id="left-arrow">
+                <span>Portal PUCMM</span>
+            </a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/teppucmm" target="_blank" class="round-border-icon">
+                    <i style="font-size: 13px;" class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/tep_pucmm/" target="_blank" class="round-border-icon">
+                    <i style="font-size: 14px;" class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-bottom">
+            <a href="https://tep.pucmm.edu.do/"><img src="images/logo.png" alt="logo'tep" id="logo-tep-300px"></a>
+            <nav id="nav-bar" class="container">
+                <ul id="nav-bar-main-list">
+                    <li class="nav-bar-main-list-element"><a href="#">NOSOTROS</a>
+                        <ul class="nav-bar-hidden-list">
+                            <li class="nav-bar-hidden-list-element"><a href="#">QUIÉNES SOMOS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">NOTICIAS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">CONTACTOS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-bar-main-list-element"><a href="#">OFERTA</a>
+                        <ul class="nav-bar-hidden-list">
+                            <li class="nav-bar-hidden-list-element"><a href="#">SCUELA SNACK</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">CARRERAS TS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">CURSOS Y DIPLOMADOS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">SERVICIOS CORPORATIVOS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">INFOTEP</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-bar-main-list-element"><a href="#">ACADÉMICO</a>
+                        <ul class="nav-bar-hidden-list">
+                            <li class="nav-bar-hidden-list-element"><a href="#">SOLICITA ADMISIÓN TS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">INFO ADMISIÓN TS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">CALENDARIO</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">PROCESOS (FAQ)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-bar-main-list-element"><a href="#">ENLACES</a>
+                        <ul class="nav-bar-hidden-list">
+                            <li class="nav-bar-hidden-list-element"><a href="#">MI CAMPUS</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">CORREO ELECTRÓNICO</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">PLATAFORMA VIRTUAL [PVA]</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">BIBLIOTECA</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">ORIENTACIÓN</a></li>
+                            <li class="nav-bar-hidden-list-element"><a href="#">INCLUSIÓN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form action="/buscar" method="get" id="search-form">
+                <input type="text" id="search" name="search" placeholder="Buscar este sitio" maxlength="80"
+                    autocomplete="off" autocorrect="off">
+                <button type="submit" class="search-icon"></button>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div id="separador"></div>
+        <div id="contenedorBarraProgreso">
+            <div id="barraProgreso" style="width: 50%;"></div>
+            <span id="textoProgreso" style="float: right;">50%</span>
+        </div>
+        <div class="form-container">
+            <form id="admission-form">
+                <h1>Solicitud de Admisión a carreras Técnico Superior</h1>
+                <h4>“Este formulario solo puede ser completado una vez por estudiante, antes de enviar por favor
+                    verifica que todos los datos suministrados estén correctos. En caso de no tener todos los documentos
+                    a mano al momento de completar el formulario, puedes darle a enviar y los que queden pendientes
+                    mandarlos por correo a <a href="mailto:tep@pucmm.edu.do"
+                        target="_blank">tep@pucmm.edu.do</a>&nbsp;junto con tu nombre, carrera de interés y campus”.
+                </h4>
+                <div class="form-group" id="campus-section">
+                    <div id="campus-section-title">Campus y Carrera al que solicita admisión</div>
+                    <div class="form-group" id="campus-section-content">
+                        <div id="label-campus">
+                            <label for="campus">Campus</label>
+                        </div>
+                        <div id="radio-campus">
+                            <input type="radio" name="campus" id="campus-1" value="Campus de Santiago">
+                            <label for="campus-1">Campus de Santiago</label>
+                            <input type="radio" name="campus" id="campus-2" value="Campus de Santo Domingo">
+                            <label for="campus-2">Campus de Santo Domingo</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="period-section-content">
+                        <div id="label-period">
+                            <label for="period">Período de ingreso que desea solicitar:</label>
+                        </div>
+                        <div id="radio-period">
+                            <input type="radio" name="period" id="period-sept-2024" value="Septiembre 2024">
+                            <label for="period-sept-2024">Septiembre 2024</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="general-info-section">
+                    <div id="general-info-section-title">I. Información General del Solicitante</div>
+                    <div class="form-group" id="general-info-section-content">
+                        <div class="input-group">
+                            <div class="input-item">
+                                <div id="label-name">
+                                    <label for="name">Nombres</label>
+                                </div>
+                                <div id="input-name">
+                                    <input type="text" name="name" id="name" required>
+                                </div>
+                            </div>
+                            <div class="input-item">
+                                <div id="label-lastname">
+                                    <label for="lastname">Apellidos</label>
+                                </div>
+                                <div id="input-lastname">
+                                    <input type="text" name="lastname" id="lastname" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="personal-info-section">
+                        <div class="form-group" id="personal-info-section-1">
+                        <div class="form-group" id="birthdate-section">
+                            <label for="birthdate" id="label-birthdate">Fecha de nacimiento </label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                        <div class="form-group" id="gender-section">
+                            <label for="gender" id="label-gender">Sexo </label><br>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected hidden>Selecciona tu género</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Femenino</option>
+                                <option value="no-especificar">No especificar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="personal-info-section-2">
+                        <div class="form-group" id="id-section">
+                            <label for="cedula" id="label-cedula">Cédula de identidad </label><br>
+                            <span>Favor llenar solo con números, sin guion ni espacio.</span>
+                            <input type="text" id="cedula" name="cedula" required>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button onclick="irASegundaPagina()">Próxima página</button>
+                </div>
+        </div>
+
+        </form>
+    </div>
+    </div>
+    <div class="container" id="footer">
+
+    </div>
+</body>
+
+</html>

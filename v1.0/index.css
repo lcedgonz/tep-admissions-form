@@ -1,0 +1,698 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/* Top del header */
+
+#header-top {
+    background-color: #ffffff;
+    height: 52px;
+    margin: 0 60px 0 60px;
+    padding: 5px 0 5px 0;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-top img {
+    vertical-align: middle;
+}
+
+#header-top img:hover {
+    transform: scale(1.1);
+}
+
+#portal-pucmm {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6f6f6f;
+    font-family: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* Iconos de redes sociales del TEP */
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.round-border-icon {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #edeaea;
+    line-height: 42px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #6f6f6f;
+}
+
+.round-border-icon i {
+    font-size: 14px;
+}
+
+
+.round-border-icon:hover {
+    background-color: #2c2961;
+    color: #ffffff;
+}
+
+/*  Bottom del header */
+
+#header-bottom {
+    padding: 0px 100px 10px 100px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    background-color: #2e2961;
+}
+
+
+
+#logo-tep-300px {
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+/* Barra de navegación */
+
+nav {
+    flex-grow: 1;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#search-form {
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    position: relative;
+}
+
+#search {
+    background-color: transparent;
+    border: none;
+    color: white;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding-right: 30px;
+    outline: none;
+    font-size: 11px;
+    font-family: inherit;
+    width: 200px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder {
+    color: #ffffff;
+}
+
+button[type="submit"] {
+    background-image: url('/P3-CSS/images/search-icon.png');
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* MENÚ DE NAVEGACIÓN MAIN */
+
+#nav-bar {
+    background-color: #2e2961;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-bar-main-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-main-list-element {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.nav-bar-main-list-element:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav-bar-main-list-element a {
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+    color: #ffffff;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.nav-bar-main-list-element:last-child {
+    margin-right: 0;
+}
+
+.nav-bar-main-list-element a:hover {
+    background-color: #37366f;
+}
+
+.nav-bar-main-list-element a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.nav-bar-main-list-element a:hover::after {
+    width: 100%;
+}
+
+.nav-bar-main-list-element a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.nav-bar-main-list-element a:hover::before {
+    width: 100%;
+}
+
+/* ESTILOS HIDDEN MENU */
+
+.nav-bar-hidden-list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: auto;
+    font-size: small;
+}
+
+.nav-bar-hidden-list-element {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-bar-hidden-list-element a {
+    color: #747474;
+    text-decoration: none;
+    display: block;
+    padding: 15px 30px;
+    margin: 0;
+    white-space: nowrap;
+    height: auto;
+    transition: background-color 0.5s;
+    line-height: 1.5;
+    position: relative;
+}
+
+
+.nav-bar-hidden-list-element a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    background-color: #2c2961;
+    z-index: -1;
+}
+
+.nav-bar-hidden-list-element a:hover::before {
+    width: 100%;
+}
+
+.nav-bar-hidden-list-element a:hover {
+    color: #fff;
+    text-decoration: underline;
+    background-color: #2c2961;
+    margin: 0;
+}
+
+.nav-bar-main-list-element:hover .nav-bar-hidden-list {
+    display: block;
+    margin: 0;
+}
+
+.nav-bar-main-list-element:last-child:hover {
+    border-bottom: none;
+}
+
+
+/* Main content of the page */
+#main {
+    margin-top: 40px;
+    ;
+    border: none;
+}
+
+#separador {
+    height: 100px;
+    border: none;
+}
+
+#contenedorBarraProgreso {
+    width: 100%;
+    background-color: #cfd6e0;
+    position: relative;
+}
+
+#barraProgreso {
+    height: 8px;
+    background-color: #a1aebf;
+}
+
+#textoProgreso {
+    position: absolute;
+    right: 25px;
+    bottom: -25px;
+    top: 15px;
+    border-color: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #2a2a2a;
+}
+
+/* Formulario */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 25px 0 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    color: #2a2a2a;
+    font-weight: 400;
+    font-size: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-container h4 {
+    color: #2a2a2a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 375;
+    font-size: 1.1em;
+    line-height: 1.2;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #0142a2;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border: 0.8px 30px 0.8px 30px;
+    border-color: none;
+}
+
+.form-group button:hover {
+    background-color: #002151;
+}
+
+
+/* Campus section */
+
+#campus-section-content {
+    display: inline-block;
+    padding: 8px;
+    width: 50%;
+}
+
+#campus-section-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    background-color: #0f64a2;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-align: left;
+}
+
+/* Estilos para los radio buttons */
+#label-campus {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 0 0;
+    color: #2a2a2a;
+    font-weight: bold;
+
+}
+
+#label-campus::after {
+    content: '*';
+    color: red;
+}
+
+#radio-campus {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 20px 0 0;
+    padding: 9px 0px;
+    font-weight: 375;
+
+}
+
+#radio-campus input[type="radio"] {
+    margin-right: 2.5px;
+    display: none;
+}
+
+#radio-campus label {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#radio-campus label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 0.5px solid #0142a2;
+    border-radius: 50%;
+    background: white;
+}
+
+#radio-campus input[type="radio"]:checked+label::before {
+    background-color: #404040;
+    border-color: #404040;
+}
+
+#radio-campus label:hover::before {
+    border-color: #0142a2;
+}
+
+#radio-campus input[type="radio"]:checked+label:hover::before {
+    border-color: #015fa2;
+    border-width: 1.3px;
+}
+
+/* Period section*/
+#period-section-content {
+    padding: 8px;
+    display: inline-block;
+
+}
+
+#period-section-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    background-color: #0f64a2;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-align: left;
+}
+
+
+/* Estilos para los radio buttons */
+#label-period {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 0 0;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+#label-period::after {
+    content: '*';
+    color: red;
+}
+
+#radio-period {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 20px 0 0;
+    padding: 9px 0px;
+    font-weight: 375;
+}
+
+#radio-period input[type="radio"] {
+    margin-right: 2.5px;
+    display: none;
+}
+
+#radio-period label {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#radio-period label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 0.5px solid #0142a2;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#radio-period input[type="radio"]:checked+label::before {
+    background-color: #404040;
+    border-color: #404040;
+}
+
+#radio-period input[type="radio"]:checked+label:hover::before {
+    border-color: #015fa2;
+    border-width: 1.3px;
+}
+
+/* General info section */
+#general-info-section-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input-item {
+    flex: 1;
+    margin-right: 0px;
+}
+
+#general-info-section-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    background-color: #0f64a2;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-align: left;
+}
+
+#label-name,
+#label-lastname,
+#label-birthdate,
+#label-gender,
+#label-cedula {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 0 0;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+#label-name::after,
+#label-lastname::after,
+#label-birthdate::after,
+#label-gender::after,
+#label-cedula::after {
+    content: '*';
+    color: red;
+}
+
+#name,
+#lastname {
+    border: 1px solid #a0aec0;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2a2a2a;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    background-color: transparent;
+    flex-grow: 1;
+    font-family: inherit;
+}
+
+#name:focus,
+#lastname:focus {
+    outline: none;
+}
+
+#personal-info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 20px;
+    align-items:flex-end;
+}
+
+#personal-info-section-1 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 20px;
+    width: 50%;
+}
+
+#personal-info-section-2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+#label-birthdate,
+#label-gender,
+#label-cedula {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 0 5px 0;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+#birthdate,
+#cedula,
+#gender {
+    border: 1px solid #a0aec0;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2a2a2a;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    background-color: transparent;
+    flex-grow: 1;
+    font-family: inherit;
+}
+
+#id-section,
+#gender-section {
+    width: 100%;
+}
+
+span {
+    font-size: 14px;
+    color: #808080;
+}
