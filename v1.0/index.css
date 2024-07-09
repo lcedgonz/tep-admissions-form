@@ -72,7 +72,7 @@ body {
 /*  Bottom del header */
 
 #header-bottom {
-    padding: 0px 100px 10px 100px;
+    padding: 0 100px 10px 100px;
     height: 115px;
     display: flex;
     align-items: center;
@@ -135,7 +135,7 @@ input[type="text"]::placeholder {
 }
 
 button[type="submit"] {
-    background-image: url('/P3-CSS/images/search-icon.png');
+    background-image: url('images/search-icon.png');
     background-size: 15px 15px;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,7 +181,7 @@ button[type="submit"] {
     text-align: center;
     transition: background-color 0.3s;
     color: #ffffff;
-    padding: 0px 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,7 +239,7 @@ button[type="submit"] {
     margin: 0;
     top: 100%;
     left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1000;
     height: auto;
     font-size: small;
@@ -251,7 +251,6 @@ button[type="submit"] {
     margin: 0;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
-    padding: 0;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -332,7 +331,7 @@ button[type="submit"] {
     right: 25px;
     bottom: -25px;
     top: 15px;
-    border-color: none;
+    border-color: unset;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #2a2a2a;
@@ -352,7 +351,7 @@ button[type="submit"] {
 .form-container {
     background-color: #ffffff;
     padding: 20px;
-    margin: 20px 25px 0 25px;
+    margin: 50px 25px 50px 25px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -384,7 +383,6 @@ button[type="submit"] {
 .form-group button {
     padding: 10px 20px;
     background-color: #0142a2;
-    border: none;
     border-radius: 4px;
     color: #ffffff;
     font-size: 16px;
@@ -392,8 +390,7 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     width: 100%;
-    border: 0.8px 30px 0.8px 30px;
-    border-color: none;
+    border: none;
 }
 
 .form-group button:hover {
@@ -438,13 +435,13 @@ button[type="submit"] {
     gap: 5px;
     align-items: center;
     margin: 0 20px 0 0;
-    padding: 9px 0px;
+    padding: 9px 0;
     font-weight: 375;
 
 }
 
 #radio-campus input[type="radio"] {
-    margin-right: 2.5px;
+    margin-right: 3px;
     display: none;
 }
 
@@ -456,18 +453,6 @@ button[type="submit"] {
     font-size: 16px;
 }
 
-#radio-campus label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    border: 0.5px solid #0142a2;
-    border-radius: 50%;
-    background: white;
-}
 
 #radio-campus input[type="radio"]:checked+label::before {
     background-color: #404040;
@@ -480,7 +465,7 @@ button[type="submit"] {
 
 #radio-campus input[type="radio"]:checked+label:hover::before {
     border-color: #015fa2;
-    border-width: 1.3px;
+    border-width: 1px;
 }
 
 /* Period section*/
@@ -519,12 +504,12 @@ button[type="submit"] {
     gap: 5px;
     align-items: center;
     margin: 0 20px 0 0;
-    padding: 9px 0px;
+    padding: 9px 0;
     font-weight: 375;
 }
 
 #radio-period input[type="radio"] {
-    margin-right: 2.5px;
+    margin-right: 3px;
     display: none;
 }
 
@@ -536,7 +521,7 @@ button[type="submit"] {
     font-size: 16px;
 }
 
-#radio-period label::before {
+#radio-period label::before, #radio-campus label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -544,7 +529,7 @@ button[type="submit"] {
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    border: 0.5px solid #0142a2;
+    border: 1px solid #0142a2;
     border-radius: 50%;
     background: white;
     transition: all 0.3s ease;
@@ -557,7 +542,7 @@ button[type="submit"] {
 
 #radio-period input[type="radio"]:checked+label:hover::before {
     border-color: #015fa2;
-    border-width: 1.3px;
+    border-width: 1px;
 }
 
 /* General info section */
@@ -577,7 +562,7 @@ button[type="submit"] {
 
 .input-item {
     flex: 1;
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #general-info-section-title {
@@ -611,7 +596,9 @@ button[type="submit"] {
 }
 
 #name,
-#lastname {
+#lastname,
+#gender, #birthdate,
+#cedula {
     border: 1px solid #a0aec0;
     border-radius: 3px;
     padding: 8px;
@@ -666,25 +653,6 @@ button[type="submit"] {
     padding: 10px 0 5px 0;
     color: #2a2a2a;
     font-weight: bold;
-}
-
-#birthdate,
-#cedula,
-#gender {
-    border: 1px solid #a0aec0;
-    border-radius: 3px;
-    padding: 8px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color: #2a2a2a;
-    outline: none;
-    transition: border-color 0.3s ease-in-out;
-    background-color: transparent;
-    flex-grow: 1;
-    font-family: inherit;
 }
 
 #id-section,
