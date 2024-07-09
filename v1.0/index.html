@@ -69,8 +69,8 @@
                 </ul>
             </nav>
             <form action="/buscar" method="get" id="search-form">
-                <input type="text" id="search" name="search" placeholder="Buscar este sitio" maxlength="80"
-                    autocomplete="off" autocorrect="off">
+                <label for="search"></label><input type="text" id="search" name="search" placeholder="Buscar este sitio" maxlength="80"
+                                                   autocomplete="off" autocorrect="off">
                 <button type="submit" class="search-icon"></button>
             </form>
         </div>
@@ -94,7 +94,7 @@
                     <div id="campus-section-title">Campus y Carrera al que solicita admisión</div>
                     <div class="form-group" id="campus-section-content">
                         <div id="label-campus">
-                            <label for="campus">Campus</label>
+                            Campus
                         </div>
                         <div id="radio-campus">
                             <input type="radio" name="campus" id="campus-1" value="Campus de Santiago">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="form-group" id="period-section-content">
                         <div id="label-period">
-                            <label for="period">Período de ingreso que desea solicitar:</label>
+                            Período de ingreso que desea solicitar:
                         </div>
                         <div id="radio-period">
                             <input type="radio" name="period" id="period-sept-2024" value="Septiembre 2024">
@@ -154,19 +154,17 @@
                     <div class="form-group" id="personal-info-section-2">
                         <div class="form-group" id="id-section">
                             <label for="cedula" id="label-cedula">Cédula de identidad </label><br>
-                            <span>Favor llenar solo con números, sin guion ni espacio.</span>
+                            <span>Favor, llenar solo con números, sin guion ni espacio.</span>
                             <input type="text" id="cedula" name="cedula" required>
                         </div>
                     </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <button onclick="irASegundaPagina()">Próxima página</button>
+                    <button onclick="">Próxima página</button>
                 </div>
+            </form>
         </div>
-
-        </form>
-    </div>
     </div>
     <div class="container" id="footer">
 
