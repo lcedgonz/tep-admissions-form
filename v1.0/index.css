@@ -1,25 +1,60 @@
-body {
+/* Reset general */
+body, h1, h4, p, ul, form, span, input {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+#header {
+    background-color: none;
+    color: white;
 }
 
 /* Top del header */
-
 #header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #ffffff;
     height: 52px;
-    margin: 0 60px 0 60px;
-    padding: 5px 0 5px 0;
-    ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 0 110px 0 110px;
+    padding: 10px 20px;
 }
+
 
 #header-top img {
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 #header-top img:hover {
@@ -36,8 +71,6 @@ body {
     font-weight: bold;
 }
 
-
-
 /* Iconos de redes sociales del TEP */
 
 .social-icons {
@@ -46,16 +79,15 @@ body {
 }
 
 .round-border-icon {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 42px;
     height: 42px;
     border-radius: 50%;
     background-color: #edeaea;
     line-height: 42px;
-    text-align: center;
-    vertical-align: middle;
     transition: background-color 0.3s ease;
-    text-decoration: none;
     color: #6f6f6f;
 }
 
@@ -70,19 +102,18 @@ body {
 }
 
 /*  Bottom del header */
-
 #header-bottom {
-    padding: 0 100px 10px 100px;
+    padding: 0px 150px 0px 150px;
     height: 115px;
     display: flex;
     align-items: center;
     background-color: #2e2961;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 
 
 #logo-tep-300px {
-    padding-top: 10px;
     vertical-align: middle;
 }
 
@@ -92,8 +123,8 @@ nav {
     flex-grow: 1;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-weight: 600;
+    font-style: bold;
 }
 
 #search-form {
@@ -104,6 +135,8 @@ nav {
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
     position: relative;
 }
 
@@ -303,10 +336,9 @@ button[type="submit"] {
 }
 
 
-/* Main content of the page */
+/* Contenido principal de la página*/
 #main {
     margin-top: 40px;
-    ;
     border: none;
 }
 
@@ -338,22 +370,9 @@ button[type="submit"] {
 }
 
 /* Formulario */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: auto;
-    font-family: 'Open Sans', sans-serif;
-}
-
 .form-container {
-    background-color: #ffffff;
-    padding: 20px;
     margin: 50px 25px 50px 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .form-container h1 {
@@ -362,22 +381,29 @@ button[type="submit"] {
     font-size: 1.75em;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    margin-bottom: 5px;
 }
 
 .form-container h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     color: #2a2a2a;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 375;
     font-size: 1.1em;
     line-height: 1.2;
     text-align: justify;
     margin-bottom: 20px;
 }
+.form-container a {
+    color: blue;
+    text-decoration: underline;
+}
 
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+    margin-bottom: 20px;
+
 }
 
 .form-group button {
@@ -407,12 +433,12 @@ button[type="submit"] {
 }
 
 #campus-section-title {
-    font-weight: bold;
-    font-size: 1.8em;
+    font-weight: 500;
+    font-size: 1.6em;
     background-color: #0f64a2;
     color: #ffffff;
     padding: 5px 20px;
-    text-align: left;
+    text-align: initial;
 }
 
 /* Estilos para los radio buttons */
@@ -425,10 +451,6 @@ button[type="submit"] {
 
 }
 
-#label-campus::after {
-    content: '*';
-    color: red;
-}
 
 #radio-campus {
     display: flex;
@@ -475,16 +497,6 @@ button[type="submit"] {
 
 }
 
-#period-section-title {
-    font-weight: bold;
-    font-size: 1.8em;
-    background-color: #0f64a2;
-    color: #ffffff;
-    padding: 5px 20px;
-    text-align: left;
-}
-
-
 /* Estilos para los radio buttons */
 #label-period {
     text-align: left;
@@ -494,10 +506,6 @@ button[type="submit"] {
     font-weight: bold;
 }
 
-#label-period::after {
-    content: '*';
-    color: red;
-}
 
 #radio-period {
     display: flex;
@@ -521,7 +529,8 @@ button[type="submit"] {
     font-size: 16px;
 }
 
-#radio-period label::before, #radio-campus label::before {
+#radio-period label::before,
+#radio-campus label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -555,65 +564,76 @@ button[type="submit"] {
 
 .input-group {
     display: flex;
+    align-items: flex-end;
     flex: 1;
     justify-content: space-between;
     gap: 20px;
 }
 
+
 .input-item {
     flex: 1;
-    margin-right: 0;
 }
 
 #general-info-section-title {
-    font-weight: bold;
-    font-size: 1.8em;
+    font-weight: 500;
+    font-size: 1.6em;
     background-color: #0f64a2;
     color: #ffffff;
     padding: 5px 20px;
-    text-align: left;
+    text-align: initial;
 }
 
 #label-name,
 #label-lastname,
 #label-birthdate,
 #label-gender,
-#label-cedula {
+#label-cedula,
+#label-marital-status,
+#label-nationality,
+#label-native-language {
     text-align: left;
     font-size: 14px;
-    padding: 10px 0 0;
     color: #2a2a2a;
-    font-weight: bold;
+    font-weight: 600;
 }
 
+#label-campus::after,
+#label-period::after,
 #label-name::after,
 #label-lastname::after,
 #label-birthdate::after,
 #label-gender::after,
-#label-cedula::after {
+#label-cedula::after,
+#label-marital-status::after,
+#label-nationality::after,
+#label-native-language::after {
     content: '*';
+    margin-left: 2px;
     color: red;
 }
 
 #name,
 #lastname,
-#gender, #birthdate,
-#cedula {
+#gender,
+#birthdate,
+#cedula,
+#marital-status,
+#nationality,
+#native-language {
     border: 1px solid #a0aec0;
     border-radius: 3px;
     padding: 8px;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 10px;
-    margin-top: 10px;
     color: #2a2a2a;
     outline: none;
     transition: border-color 0.3s ease-in-out;
     background-color: transparent;
-    flex-grow: 1;
     font-family: inherit;
 }
+
 
 #name:focus,
 #lastname:focus {
@@ -627,8 +647,9 @@ button[type="submit"] {
     box-sizing: border-box;
     width: 100%;
     gap: 20px;
-    align-items:flex-end;
+    align-items: flex-end;
 }
+
 
 #personal-info-section-1 {
     display: flex;
@@ -645,22 +666,192 @@ button[type="submit"] {
     width: 50%;
 }
 
-#label-birthdate,
-#label-gender,
-#label-cedula {
-    text-align: left;
-    font-size: 14px;
-    padding: 10px 0 5px 0;
-    color: #2a2a2a;
-    font-weight: bold;
-}
-
-#id-section,
-#gender-section {
+#status-info-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
     width: 100%;
 }
 
-span {
+#main input[type="text"],
+#main input[type="date"],
+#main select {
+    height: 40px;
+    margin-top: 5px;
+}
+
+#status-info-section-content {
+    display: flex;
+    align-items: flex-end; 
+}
+
+
+#id-section,
+#gender-section{
+    width: 100%;
+}
+
+#header-top span,
+#id-section span {
     font-size: 14px;
     color: #808080;
+}
+
+
+/* Pie de página */
+
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0 0 0;
+}
+
+#footer .row {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#top-footer {
+    padding-bottom: 30px;
+}
+
+#footer .top-footer-col {
+    flex: 1;
+    margin: 0 15px;
+}
+
+#footer h4 {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin: 0px 0px 5px;
+    vertical-align: top;
+}
+
+#top-footer p,
+#top-footer ul {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 24px;
+    vertical-align: top;
+    letter-spacing: normal;
+    text-align: start;
+    font-weight: 300;
+    margin: 0;
+}
+
+#footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+#top-footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+#footer .top-footer-col {
+    float: left;
+    width: 33.33%;
+}
+
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 52px;
+    right: 80px;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    z-index: 99;
+    background-color: #2c2961;
+    color: #fff;
+    border: none;
+    padding: 0;
+    border-radius: 0%;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+}
+
+.back-to-top i{
+    font-size: 20px;
+}
+
+.back-to-top a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #fdfdfd;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
+}
+
+#col-3-quick-links .fa {
+    display: inline-block;
+    font: normal;
+    font-size: 16px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+#top-footer ul li a:hover {
+    color: #2b45c1;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+#top-footer ul li a:hover i {
+    transition: all .3s ease-in-out;
+    color: #2b45c1;
+}
+
+.bottom-footer {
+    padding: 25px 0 25px 0;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 24px;
+    font-weight: 300;
+    background-color: #090909;
+}
+
+.bottom-footer p {
+    margin: 0;
+}
+
+
+.bottom-footer a {
+    color: #2b45c1;
+    text-decoration: none;
+}
+
+.bottom-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+  }
+
+hr {
+    border: 1px solid #0f64a2;
 }
